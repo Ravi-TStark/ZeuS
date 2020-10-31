@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>APOLLO</title>
+    <link rel="stylesheet" href="./css/mainWindow.css">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline';" />
+</head>
+
+<body>
+    <div id="title-bar">
+        ZeuS
+        <div>
+            <div>
+                .<br>.<br>.
+            </div>
+        </div>
+    </div>
+    <div id="main-container">
+        <div id="file-explorer">
+            <div id="file-explorer-navPane">
+                <p>
+                    No Projects Added
+                </p>
+            </div>
+            <div id="file-explorer-contents">
+                <div class="file-explorer-no-projects">
+                    <div class="file-explorer-no-projects-div">Uh Oh! Not working on any Projects?</div><br>
+                    <button class="file-explorer-no-projects-button"><img src='./img/Add-Project.png'/> Add a Project Directory</button> <br>
+                    or <br>
+                    <button class="file-explorer-no-projects-button"><img src='./img/New-Project.png'/> Start a New Project</button>
+                </div>
+            </div>
+        </div>
+        <div id="devZone">
+            <div id="gitBar">
+                <button id="git-Branch">
+                    master
+                </button>
+                <button id="git-Add">
+                    Track all Changes
+                </button>
+                <div id="git-Status">
+
+                </div>
+            </div>
+            <div class="the-console">
+                <textarea cols="90" id='console-output' disabled='true'>
+
+                </textarea>
+                <div id='inputIndicator'>
+                    >
+                </div>
+                <input id='consoleInput' placeholder="Enter your command here" />
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="./scripts/renderer.js"></script>
+
+<script>
+    // GLUE to the screen
+    function getCommandOutput() { return document.getElementById("console-output"); };
+
+    var input = document.getElementById("consoleInput");
+
+    // Execute a function when the user releases a key on the keyboard
+    input.addEventListener("keyup", function (event) {
+        input.value = input.value.toString().trimStart()
+        // Number 13 is the "Enter" key on the keyboard
+        if (event.keyCode === 13) {
+            // Cancel the default action, if needed
+            event.preventDefault();
+            // Trigger the button element with a click
+            backgroundProcess(this.value);
+            input.value = ''
+            console.log('Clicked');
+        }
+    });
+
+    function keydown(e) {
+        console.log('Here');
+        if (e.keyCode === 13) {
+            e.preventDefault();
+            backgroundProcess(this.value);
+            console.log('Clicked');
+        }
+    }
+
+    InitConsole();
+    // End of GLUE
+</script>
+
+</html>

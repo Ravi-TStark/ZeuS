@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="463.468" height="951.614" viewBox="0 0 463.468 951.614">
+  <defs>
+    <filter id="Icon_weather-lightning" x="21" y="21" width="421.468" height="909.614" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.251"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Icon_weather-lightning-2" x="0" y="0" width="463.468" height="951.614" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="10" result="blur-2"/>
+      <feFlood flood-opacity="0.502"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <clipPath id="clip-path">
+      <g transform="matrix(1, 0, 0, 1, 0, 0)" filter="url(#Icon_weather-lightning)">
+        <path id="Icon_weather-lightning-3" data-name="Icon weather-lightning" d="M9.552,1006.848,410.626,445.523q7.448-14.888-8.275-14.888H245.673L410.626,130.122c4.965-9.925,1.1-14.888-11.034-14.888H189.4c-6.069,0-11.034,3.308-16,9.925L20.034,533.2c-1.1,9.925,2.207,14.888,10.482,14.888H182.229Z" transform="translate(-9.55 -115.23)"/>
+      </g>
+    </clipPath>
+    <filter id="Rectangle_13" x="8.603" y="20.824" width="495.267" height="356.252" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-3"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Rectangle_15" x="-130.897" y="193.901" width="774.267" height="414.459" filterUnits="userSpaceOnUse">
+      <feOffset input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="49.5" result="blur-4"/>
+      <feFlood flood-opacity="0.596"/>
+      <feComposite operator="in" in2="blur-4"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Component_2_2" data-name="Component 2 – 2" transform="translate(30 27)">
+    <g transform="matrix(1, 0, 0, 1, -30, -27)" filter="url(#Icon_weather-lightning-2)">
+      <path id="Icon_weather-lightning-4" data-name="Icon weather-lightning" d="M9.552,1006.848,410.626,445.523q7.448-14.888-8.275-14.888H245.673L410.626,130.122c4.965-9.925,1.1-14.888-11.034-14.888H189.4c-6.069,0-11.034,3.308-16,9.925L20.034,533.2c-1.1,9.925,2.207,14.888,10.482,14.888H182.229Z" transform="translate(20.45 -88.23)"/>
+    </g>
+    <g id="Mask_Group_3" data-name="Mask Group 3" clip-path="url(#clip-path)">
+      <g id="Group_15" data-name="Group 15" transform="translate(-12.397 -0.176)">
+        <rect id="Rectangle_14" data-name="Rectangle 14" width="477.267" height="462.153" transform="translate(0 429.939)" fill="#7ca5b7"/>
+        <g transform="matrix(1, 0, 0, 1, -17.6, -26.82)" filter="url(#Rectangle_13)">
+          <rect id="Rectangle_13-2" data-name="Rectangle 13" width="477.267" height="338.252" transform="translate(17.6 26.82)" fill="#d6f2ff"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, -17.6, -26.82)" filter="url(#Rectangle_15)">
+          <rect id="Rectangle_15-2" data-name="Rectangle 15" width="477.267" height="117.459" transform="translate(17.6 342.4)" fill="#9ec6d8"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

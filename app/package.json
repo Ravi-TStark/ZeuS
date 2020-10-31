@@ -1,0 +1,25 @@
+{
+  "name": "Apollo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "start": "electron .",
+    "rebuild": "electron-rebuild -f -w node-pty"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^10.1.3",
+    "electron-rebuild": "^2.3.2"
+  },
+  "dependencies": {
+    "electron-is": "^3.0.0",
+    "node-pty": "^0.9.0",
+    "xterm": "^4.9.0"
+  }
+}

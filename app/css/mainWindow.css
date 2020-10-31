@@ -1,0 +1,289 @@
+*{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-size: small;
+}
+
+body{
+    font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+    background: linear-gradient(rgb(41, 41, 43), rgb(32, 32, 32));
+    text-align: center;
+    height: 100vh;
+    color: white;
+}
+
+input[type=text]{
+    min-height: 30px;
+    border: 0.5px solid darkgray;
+    border-radius: 16px;
+    color: black;
+    padding-left: 14px;
+    padding-right: 14px;
+    min-width: 175px;
+    transition: min-width 0.2s;
+    transition: width 0.2s;
+}
+
+input[type=text]:focus{
+    border: 1px solid rgb(218, 73, 73);
+    transition: border 0.2s;
+    box-shadow: 0px 3px 25px rgb(0,0,0);
+}
+
+#title-bar{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 39px;
+    line-height: 39px;
+    font-size: 18px;
+    font-weight: bolder;
+    -webkit-app-region: drag;
+    color: rgb(255, 255, 255);
+    text-align: right;
+    -webkit-user-select: none;
+    cursor: default;
+    padding-right: 30px;
+}
+
+#title-bar div{
+    position: absolute;
+    top: -10px;
+    right: -13.5px;
+    display: block;
+    -webkit-app-region: none;
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    min-width: 10px;
+    min-height: 20px;
+    position: relative;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+#title-bar div div:hover{
+    background: rgba(148, 148, 148, 0.25);
+}
+
+#title-bar div:active{
+    background: rgba(73, 73, 73, 0.25);
+}
+
+#title-bar div div{
+    position: absolute;
+    font-size: 15px;
+    line-height: 6px;
+    font-family: 'Times New Roman';
+    top: -22px;
+    left: 5px;
+    display: block;
+    min-width: 10px;
+    min-height: 10px;
+}
+
+#main-container{
+    height: 100vh;
+    width: calc(100% - 0px);
+    padding: 0px;
+    text-align: center;
+    min-height: 500px;
+    min-width: 500px;
+    overflow: scroll;
+}
+
+#main-container {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: min-content auto;
+    gap: 0px 0px;
+    grid-template-areas:
+      "."
+      ".";
+  }
+
+#file-explorer{
+    display: grid;
+    height: calc(100%);
+    width: calc(100% - 0px);
+    border-bottom: 1px solid rgb(65, 65, 65);
+    grid-template-columns: min-content auto;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas:
+        ". .";
+    overflow: auto;
+    resize: vertical;
+    min-height: calc(50vh - 1px);
+    height: calc(77vh - 1px);
+    max-height: calc(100vh - 26px);
+}
+
+#file-explorer-navPane {
+    padding-top: 39px;
+    overflow: auto;
+    resize: horizontal;
+    background-color: rgba(0, 0, 0, 0.25);
+    min-width: 200px;
+    max-width: 40vw;
+    width: calc(20vw);
+    transition: all 0.2s;
+    border-right: 1px solid rgb(32, 32, 32);
+    box-shadow: 1px 0px 5px rgba(0,0,0,0.75);
+    position: relative;
+}
+
+#file-explorer-navPane p{
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    font-style: italic;
+    opacity: 80%;
+}
+
+#file-explorer-contents {
+    padding-top: 39px;
+    line-height: 40px;
+    position: relative;
+}
+
+.file-explorer-no-projects-button{
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    min-width: 200px;
+    height: 40px;
+    line-height: 20px;
+    background: linear-gradient(rgba(214, 214, 214, 0.25), rgba(214, 214, 214, 0.3));
+    border-radius: 3px;
+    color: white;
+    outline: none;
+    border: none;
+    transition: background 0.2s;
+    -webkit-user-select: none;
+}
+
+.file-explorer-no-projects-button img{
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+    float: left;
+    margin-right: 10px;
+    -webkit-user-select: none;
+}
+
+.file-explorer-no-projects-button:hover{
+    background: linear-gradient(rgba(148, 148, 148, 0.25), rgba(148, 148, 148, 0.3));
+}
+
+.file-explorer-no-projects-button:active{
+    background: linear-gradient(rgba(87, 87, 87, 0.25), rgba(87, 87, 87, 0.3));
+}
+
+.file-explorer-no-projects{
+    display: block;
+    position: absolute;
+    top: 50%; left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-user-select: none;
+}
+
+.file-explorer-no-projects-div{
+    display: block;
+    width: 100%;
+    font-size: xx-large;
+    font-weight: medium;
+    font-family: 'Helvetica Neue', 'Segoe UI', Monospace, sans-serif;
+    color: darkgray;
+    -webkit-user-select: none;
+}
+
+#devZone{
+    height: calc(100% - 0.5vh);
+    overflow: scroll;
+    position: relative;
+}
+
+#gitBar{
+    background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0,0,0,0.65));
+    min-height: 22px;
+    height: 100%;
+    max-height: 22px;
+}
+
+#gitBar button{
+    float: right;
+    background-color: transparent;
+    height: calc(22px - 2px);
+    margin-top: 1px;
+    min-width: 60px;
+    font-size: smaller;
+    width: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    overflow: auto;
+    border: none;
+    outline: none;
+    color: white;
+}
+
+#gitBar button:hover{
+    background-color: rgba(255, 255, 255, 0.15);
+    transition: all 0.2s;
+}
+
+
+.the-console{
+    display: flex;
+    position: relative;
+    border-top: 1px solid transparent;
+    background: rgba(0,0,0,0.65);
+    height: calc(100% - 22px);
+    font-family: 'Lucida Console', 'Menlo', 'Consolas', 'Courier', 'monospace';
+    font-size: 10px;
+    line-height: 16px;
+    overflow: scroll;
+    margin-bottom: 0px;
+}
+
+#console-output{
+    display: block;
+    width: 100%;
+    border: none;
+    padding: 5px;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: calc(100% - 30px);
+    background-color: transparent;
+    color: white;
+    overflow: scroll;
+    resize: none;
+}
+
+#inputIndicator{
+    position: absolute;
+    left: 5px;
+    right: calc(100% - 10px);
+    bottom: 0;
+    color: white;
+}
+
+#consoleInput{
+    position: absolute;
+    left: 10px;
+    right: 0;
+    bottom: 0;
+    padding-left: 10px;
+    width: calc(100% - 25px);
+    color: white;
+    caret-color: rgb(200, 200, 200);
+    font-family: 'Lucida Console', 'Menlo', 'Consolas', 'Courier', 'monospace';
+    font-size: 10px;
+    line-height: 16px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
